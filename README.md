@@ -1,2 +1,1 @@
-# Angular-Training
-All angular concepts learnt and implemented
+All the Basic Angular Concepts that i learned and any notes regarding that.
