@@ -1,0 +1,102 @@
+[
+  {
+    "firstName": "Tej",
+    "lastName": "ch",
+    "email": "chtej@gmail.com",
+    "password": "12345678",
+    "DOB": "",
+    "phoneNumber": "",
+    "gender": true,
+    "department": ""
+  },
+  {
+    "firstName": "raj",
+    "lastName": "s",
+    "email": "rajs@gmail.com",
+    "password": "987654321",
+    "DOB": "01/01/1990",
+    "phoneNumber": "",
+    "gender": true,
+    "department": ""
+  },
+  {
+    "firstName": "Mahi",
+    "lastName": "k",
+    "email": "mahik@gmail.com",
+    "password": "abcdefghij",
+    "DOB": "01/05/2000",
+    "phoneNumber": "987654321",
+    "gender": false,
+    "department": "Marketing"
+  },
+  {
+    "firstName": "john",
+    "lastName": "v",
+    "email": "vjohn@gmail.com",
+    "password": "abc123456",
+    "DOB": "",
+    "phoneNumber": "",
+    "gender": true,
+    "department": ""
+  },
+  {
+    "firstName": "mau",
+    "lastName": "a",
+    "email": "maua@gmail.com",
+    "password": "maulovemau",
+    "DOB": "",
+    "phoneNumber": "",
+    "gender": true,
+    "department": ""
+  },
+  {
+    "firstName": "kat",
+    "lastName": "r",
+    "email": "rkat@gmail.com",
+    "password": "loveyoumau",
+    "DOB": "",
+    "phoneNumber": "",
+    "gender": true,
+    "department": "HR"
+  },
+  {
+    "firstName": "riha",
+    "lastName": "l",
+    "email": "lriha@gmail.com",
+    "password": "tomhatesmau",
+    "DOB": "",
+    "phoneNumber": "1234",
+    "gender": false,
+    "department": ""
+  },
+  {
+    "firstName": "srinu",
+    "lastName": "m",
+    "email": "srinum@gmail.com",
+    "password": "thisismsrinu",
+    "DOB": "",
+    "phoneNumber": "",
+    "gender": true,
+    "department": "Tech"
+  },
+  {
+    "firstName": "Harini",
+    "lastName": "a",
+    "email": "aharini@gmail.com",
+    "password": "softwaredev",
+    "DOB": "",
+    "phoneNumber": "",
+    "gender": false,
+    "department": ""
+  },
+  {
+    "firstName": "vijaya raghava",
+    "lastName": "s",
+    "email": "vijaya@gmail.com",
+    "password": "987654321",
+    "DOB": "",
+    "phoneNumber": "1234567890",
+    "gender": true,
+    "department": ""
+  }
+]

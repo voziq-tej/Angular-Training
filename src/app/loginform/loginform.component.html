@@ -1,0 +1,96 @@
+<form class="flex-column d-flex" #tFormModel="ngForm" submit>
+  <div class="alert p-0 m-0 pl-4">
+    <span class="text-danger" *ngIf="tFormModel.valid && !validUser">{{
+      errorMessage
+    }}</span>
+  </div>
+
+  <div class="form-group m-2">
+    <input
+      [ngModel]="email"
+      #tEmail="ngModel"
+      name="email"
+      required
+      minlength="6"
+      maxlength="100"
+      pattern="[a-zA-Z0-9._]+@[a-zA-Z0-9]+\.[a-zA-Z0-9]{2,3}"
+      type="email"
+      placeholder="Email"
+      class="form-control rounded-pill p-2 pl-4"
+      [class.is-invalid]="
+        tFormModel.submitted &&
+        ((tEmail.touched && !tEmail.valid) ||
+          (!tEmail.touched && !tEmail.valid))
+      "
+      [class.is-valid]="tEmail.valid && tEmail.touched && tFormModel.submitted"
+    />
+
+    <div
+      class="alert p-0 m-0 pl-4"
+      *ngIf="
+        tFormModel.submitted &&
+        ((tEmail.touched && !tEmail.valid) ||
+          ((!tEmail.touched || tFormModel.controls?.password?.touched) &&
+            !tEmail.valid))
+      "
+    >
+      <span class="text-danger" *ngIf="tEmail.errors?.required"
+        >Email is required.</span
+      >
+      <span class="text-danger" *ngIf="tEmail.errors?.minlength"
+        >Email Should be at least 6 Characters</span
+      >
+      <span
+        class="text-danger"
+        *ngIf="tEmail.errors?.pattern && !tEmail.errors?.minlength"
+        >Email Address Invalid</span
+      >
+    </div>
+  </div>
+
+  <div class="form-group m-2">
+    <input
+      [ngModel]="password"
+      #tPassword="ngModel"
+      name="password"
+      required
+      minlength="8"
+      maxlength="20"
+      type="password"
+      placeholder="Password"
+      class="form-control rounded-pill p-2 pl-4"
+      [class.is-invalid]="
+        tFormModel.submitted &&
+        ((tPassword.touched && !tPassword.valid) ||
+          (!tPassword.touched && !tPassword.valid))
+      "
+      [class.is-valid]="
+        tPassword.touched && tPassword.valid && tFormModel.submitted
+      "
+    />
+    <div
+      class="alert p-0 m-0 pl-4"
+      *ngIf="
+        tFormModel.submitted &&
+        ((tPassword.touched && !tPassword.valid) ||
+          ((!tPassword.touched || tFormModel.controls?.email?.touched) &&
+            !tPassword.valid))
+      "
+    >
+      <span class="text-danger" *ngIf="tPassword.errors?.required"
+        >Password can't be Empty.</span
+      >
+      <span class="text-danger" *ngIf="tPassword?.errors?.minlength"
+        >Password should be minimum of
+        {{ tPassword.errors?.minlength.requiredLength }} characters</span
+      >
+    </div>
+  </div>
+
+  <button
+    class="btn btn-primary shadow-sm rounded-pill col-4 mt-2 mr-auto ml-auto border-0"
+    (click)="validate(tFormModel)"
+  >
+    Login
+  </button>
+</form>
